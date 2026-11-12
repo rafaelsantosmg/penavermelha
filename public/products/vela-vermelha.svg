@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000" role="img" aria-label="Vela vermelha">
+  <rect width="800" height="1000" fill="#2b1214"/>
+  <rect x="350" y="360" width="100" height="360" rx="8" fill="#b91c1c"/>
+  <path d="M400 250 C380 300 390 330 400 350 C410 330 420 300 400 250 Z" fill="#f59e0b"/>
+  <ellipse cx="400" cy="730" rx="90" ry="24" fill="#7f1d1d"/>
+  <text x="400" y="900" text-anchor="middle" fill="#fde8e8" font-family="Georgia, serif" font-size="34">Vela vermelha</text>
+</svg>

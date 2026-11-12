@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Caboclo Pena Vermelha
 
-## Getting Started
+Landing page + catálogo visual (MVP) da loja Caboclo Pena Vermelha — foco em artigos de Umbanda e Candomblé.
 
-First, run the development server:
+## Stack
+
+- **Next.js** (App Router) — front e futuras rotas de API
+- **Supabase** — Postgres + Storage (opcional no MVP; há seed local)
+- **Vercel** — hosting recomendado
+
+## Desenvolvimento
 
 ```bash
+cp .env.example .env.local
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Sem variáveis do Supabase, o site usa produtos de exemplo em `src/lib/seed-data.ts`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Docker (dev com hot reload)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+O `docker compose up` sobe o Next em modo **dev**: alterações em `src/`, `public/` etc. refletem sozinhas (polling ligado para WSL).
 
-## Learn More
+```bash
+docker compose up --build
+```
 
-To learn more about Next.js, take a look at the following resources:
+Abra **http://localhost:3000**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Parar:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+docker compose down
+```
 
-## Deploy on Vercel
+Variáveis: use `.env.local` na raiz (WhatsApp/Supabase).  
+Depois de mudar o número do WhatsApp, reinicie:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+docker compose restart
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Produção (sem hot reload):
+
+```bash
+npm run docker:prod
+```
+
+### Variáveis
+
+| Variável | Uso |
+|----------|-----|
+| `NEXT_PUBLIC_SUPABASE_URL` | URL do projeto Supabase |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Chave anon |
+| `NEXT_PUBLIC_WHATSAPP_NUMBER` | WhatsApp com DDI (ex: `5511999999999`) |
+
+## Supabase
+
+1. Crie um projeto em [supabase.com](https://supabase.com)
+2. No SQL Editor, rode `supabase/schema.sql`
+3. Rode `supabase/seed.sql` (opcional)
+4. Em Storage, confirme o bucket `products` (público)
+5. Preencha `.env.local` e reinicie o dev server
+
+Cadastro de produtos no MVP: Table Editor do Supabase + upload no bucket `products`.
+
+## Deploy na Vercel
+
+1. Suba o repositório no GitHub/GitLab
+2. Importe o projeto em [vercel.com](https://vercel.com)
+3. Configure as mesmas variáveis de ambiente
+4. Deploy — domínio `.vercel.app` grátis; depois aponte seu `.com.br`
+
+```bash
+npm run build
+```
+
+## Próximas fases
+
+1. Painel `/admin` (Supabase Auth)
+2. Carrinho
+3. Checkout Mercado Pago (Pix)
+
+## Scripts
+
+- `npm run dev` — desenvolvimento
+- `npm run build` — build de produção
+- `npm run start` — servir build
+- `npm run lint` — ESLint

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000" role="img" aria-label="Colar de proteção">
+  <rect width="800" height="1000" fill="#1a2230"/>
+  <path d="M250 280 Q400 120 550 280" fill="none" stroke="#d4af37" stroke-width="10"/>
+  <circle cx="280" cy="300" r="18" fill="#c41e1e"/>
+  <circle cx="340" cy="250" r="18" fill="#111"/>
+  <circle cx="400" cy="230" r="18" fill="#c41e1e"/>
+  <circle cx="460" cy="250" r="18" fill="#111"/>
+  <circle cx="520" cy="300" r="18" fill="#c41e1e"/>
+  <circle cx="400" cy="420" r="55" fill="#d4af37"/>
+  <circle cx="400" cy="420" r="28" fill="#7f1d1d"/>
+  <text x="400" y="900" text-anchor="middle" fill="#f0e6d2" font-family="Georgia, serif" font-size="34">Colar de proteção</text>
+</svg>

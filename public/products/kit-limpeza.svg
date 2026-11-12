@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000" role="img" aria-label="Kit limpeza">
+  <rect width="800" height="1000" fill="#2a241c"/>
+  <rect x="220" y="360" width="360" height="280" rx="18" fill="#6b4f3a"/>
+  <rect x="250" y="390" width="90" height="140" rx="8" fill="#b91c1c"/>
+  <rect x="355" y="410" width="90" height="120" rx="8" fill="#4a7c59"/>
+  <circle cx="510" cy="470" r="40" fill="#111"/>
+  <circle cx="510" cy="470" r="18" fill="#c41e1e"/>
+  <text x="400" y="900" text-anchor="middle" fill="#f5ecd9" font-family="Georgia, serif" font-size="34">Kit limpeza</text>
+</svg>

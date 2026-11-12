@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000" role="img" aria-label="Guia de Caboclo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2a1a14"/>
+      <stop offset="100%" stop-color="#5c1a18"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <circle cx="400" cy="220" r="70" fill="#c41e1e"/>
+  <circle cx="400" cy="360" r="55" fill="#1a1a1a"/>
+  <circle cx="400" cy="480" r="70" fill="#c41e1e"/>
+  <circle cx="400" cy="600" r="55" fill="#1a1a1a"/>
+  <circle cx="400" cy="720" r="70" fill="#c41e1e"/>
+  <path d="M400 120 C360 180 340 240 400 300 C460 240 440 180 400 120 Z" fill="#e8c56a" opacity="0.85"/>
+  <text x="400" y="920" text-anchor="middle" fill="#f4e7d4" font-family="Georgia, serif" font-size="36">Guia de Caboclo</text>
+</svg>

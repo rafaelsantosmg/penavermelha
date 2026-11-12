@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000" role="img" aria-label="Banho de ervas">
+  <rect width="800" height="1000" fill="#243528"/>
+  <ellipse cx="400" cy="620" rx="160" ry="50" fill="#6b8f71"/>
+  <path d="M260 620 Q260 380 400 340 Q540 380 540 620" fill="#8fbc8f" opacity="0.35"/>
+  <path d="M340 500 Q360 420 390 500" fill="none" stroke="#c4d6a5" stroke-width="10"/>
+  <path d="M410 510 Q430 430 460 510" fill="none" stroke="#a8c686" stroke-width="10"/>
+  <path d="M370 560 Q400 470 430 560" fill="none" stroke="#7d9b76" stroke-width="10"/>
+  <rect x="320" y="620" width="160" height="180" rx="12" fill="#5c4033"/>
+  <text x="400" y="920" text-anchor="middle" fill="#eef5e8" font-family="Georgia, serif" font-size="34">Banho de ervas</text>
+</svg>

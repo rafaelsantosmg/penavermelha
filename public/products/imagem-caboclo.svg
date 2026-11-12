@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000" role="img" aria-label="Imagem Caboclo">
+  <rect width="800" height="1000" fill="#1f2a22"/>
+  <ellipse cx="400" cy="820" rx="180" ry="40" fill="#0f1712" opacity="0.5"/>
+  <path d="M300 780 L500 780 L470 420 L330 420 Z" fill="#8b4518"/>
+  <circle cx="400" cy="300" r="90" fill="#d4a574"/>
+  <path d="M280 250 Q400 80 520 250 Q460 180 400 160 Q340 180 280 250 Z" fill="#c41e1e"/>
+  <path d="M250 280 Q400 40 550 280" fill="none" stroke="#e8c56a" stroke-width="8"/>
+  <text x="400" y="940" text-anchor="middle" fill="#f4e7d4" font-family="Georgia, serif" font-size="32">Pena Vermelha</text>
+</svg>
