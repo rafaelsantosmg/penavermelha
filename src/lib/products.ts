@@ -11,6 +11,8 @@ function withCategory(product: Product, categories: Category[]): Product {
 }
 
 export async function getCategories(): Promise<Category[]> {
+  "use cache";
+
   const supabase = getSupabase();
   if (!supabase) return seedCategories;
 
@@ -28,6 +30,8 @@ export async function getCategories(): Promise<Category[]> {
 }
 
 export async function getProducts(categorySlug?: string): Promise<Product[]> {
+  "use cache";
+
   const supabase = getSupabase();
   const categories = await getCategories();
 
@@ -77,6 +81,8 @@ export async function getProducts(categorySlug?: string): Promise<Product[]> {
 }
 
 export async function getProductBySlug(slug: string): Promise<Product | null> {
+  "use cache";
+
   const supabase = getSupabase();
   const categories = await getCategories();
 
@@ -113,6 +119,8 @@ export async function getProductBySlug(slug: string): Promise<Product | null> {
 }
 
 export async function getFeaturedProducts(limit = 3): Promise<Product[]> {
+  "use cache";
+
   const products = await getProducts();
   return products.slice(0, limit);
 }
