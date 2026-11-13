@@ -25,7 +25,7 @@ async function CatalogResults({
 
   return (
     <>
-      <Suspense fallback={<div className="category-filter">Carregando…</div>}>
+      <Suspense fallback={<div className="mt-7 text-muted">Carregando…</div>}>
         <CategoryFilter categories={categories} />
       </Suspense>
       <CatalogGrid products={products} />
@@ -35,15 +35,19 @@ async function CatalogResults({
 
 export default function CatalogoPage({ searchParams }: PageProps<"/catalogo">) {
   return (
-    <div className="catalog-page">
-      <p className="section__eyebrow">Catálogo</p>
-      <h1>Umbanda e Candomblé</h1>
-      <p>
+    <div className="mx-auto w-[min(1120px,calc(100%-2rem))] py-10 pb-16">
+      <p className="mb-2 text-[0.8rem] tracking-[0.14em] text-crimson uppercase">
+        Catálogo
+      </p>
+      <h1 className="m-0 font-display text-[clamp(1.9rem,3vw,2.7rem)] font-medium leading-tight text-ink">
+        Umbanda e Candomblé
+      </h1>
+      <p className="mt-3 max-w-[50ch] text-muted leading-relaxed">
         Guias, imagens, ervas, velas e itens para o terreiro. Abra o produto e
         solicite pelo WhatsApp.
       </p>
 
-      <Suspense fallback={<p className="empty-state">Carregando catálogo…</p>}>
+      <Suspense fallback={<p className="mt-8 text-muted">Carregando catálogo…</p>}>
         <CatalogResults searchParams={searchParams} />
       </Suspense>
     </div>

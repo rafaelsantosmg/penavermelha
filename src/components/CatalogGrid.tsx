@@ -8,14 +8,14 @@ type CatalogGridProps = {
 export function CatalogGrid({ products }: CatalogGridProps) {
   if (products.length === 0) {
     return (
-      <p className="empty-state">
+      <p className="mt-8 text-muted">
         Nenhum produto encontrado nesta categoria. Em breve novos itens.
       </p>
     );
   }
 
   return (
-    <div className="catalog-grid">
+    <div className="mt-7 grid grid-cols-1 gap-5 md:grid-cols-3">
       {products.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}

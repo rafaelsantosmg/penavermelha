@@ -12,11 +12,20 @@ export function CategoryFilter({ categories }: CategoryFilterProps) {
   const searchParams = useSearchParams();
   const current = searchParams.get("categoria");
 
+  const base =
+    "border px-3.5 py-1.5 transition-colors border-line bg-white text-muted hover:border-[color-mix(in_srgb,var(--color-crimson)_45%,var(--color-line))] hover:bg-[color-mix(in_srgb,var(--color-crimson)_10%,white)] hover:text-crimson-deep";
+  const active =
+    "border-[color-mix(in_srgb,var(--color-crimson)_45%,var(--color-line))] bg-[color-mix(in_srgb,var(--color-crimson)_10%,white)] text-crimson-deep";
+
   return (
-    <div className="category-filter" role="navigation" aria-label="Categorias">
+    <div
+      className="mt-7 mb-2 flex flex-wrap gap-2"
+      role="navigation"
+      aria-label="Categorias"
+    >
       <Link
         href="/catalogo"
-        className={!current ? "is-active" : undefined}
+        className={`${base} ${!current ? active : ""}`}
         scroll={false}
       >
         Todos
@@ -25,7 +34,7 @@ export function CategoryFilter({ categories }: CategoryFilterProps) {
         <Link
           key={category.id}
           href={`/catalogo?categoria=${category.slug}`}
-          className={current === category.slug ? "is-active" : undefined}
+          className={`${base} ${current === category.slug ? active : ""}`}
           scroll={false}
         >
           {category.name}
